@@ -1,0 +1,147 @@
+body{
+
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* for smaller screens */
+.container {
+  border-radius: 5px;
+  background-color: #c2c2a3;
+  height: 100vh;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/* Clear floats after the columns */
+.rows:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+label {
+    display: block;
+    font-size: 27px;
+}
+
+/* for zip code user input*/
+#zip {
+    margin: 25px;
+    border: #ccccb3 solid 1px;
+    border-radius: 0.5em
+    padding: 15px;
+}
+
+input {
+    display:block;
+    height: 60px;
+    width: fit-content;
+    border: #ccccb3 solid 1px;
+    border-radius: 0.5em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* for feelings user input*/
+.feel_col {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+}
+
+#feelings {
+    width: auto;
+    padding: 15px;
+}
+
+textarea {
+    border: #ccccb3 solid 1px;
+    border-radius: 0.5em;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.generate-btn {
+      width: 400px;
+  	  height: 50px;
+  	  margin: 50px auto;
+      background: #3b4a6b;
+      color: #f0d43a;
+      font-size: 26px;
+      font-family: 'Oswald', sans-serif;
+      border: none;
+      box-shadow: 2px 4px 5px #444;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+}
+
+#generate{
+    width: fit-content;
+
+}
+
+/*  Most recent entry */
+.entry {
+    background: #f0f0f2;
+    border-radius: 0.5em;
+    padding: 15px;
+}
+
+.title {
+  color: #333300;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Oswald', sans-serif;
+}
+
+#entryHolder{
+    border: #002623 solid 1px;
+    padding-top: 20px;
+    min-height: 25vh;
+    display: grid;
+    grid-template-areas:
+            'date temp temp temp temp'
+            'cont cont cont cont cont';
+}
+
+#date {
+    grid-area: date;
+}
+
+#temp {
+    grid-area: temp;
+}
+
+#content {
+    grid-area: cont;
+}
+
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #f0d43a;
+    font-family: 'Oswald', sans-serif;
+
+}
+
+/* for large devices*/
+@media (min-width: 800px) {
+    .container {
+      height: 150vh;
+      padding: 20px;
+
+    }
+}
