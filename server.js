@@ -2,7 +2,7 @@
 * Setup empty JS object to act as endpoint for all routes
 *
 */
-projectData = [];
+projectData = {};
 
 /**
 * @description Express, Body-Parser and CORS Setup
@@ -71,6 +71,6 @@ function weatherData(request, response) {
      date: wData.date,
      userResponse: wData.userResponse
    };
-   projectData.push(newWeatherData);
+   projectData = newWeatherData;
    response.send(projectData);
 }

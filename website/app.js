@@ -18,7 +18,7 @@ const getWeatherDetails = async (baseURL, zipCode, apiKey) => {
     const weatherInfo = await request.json();
     return weatherInfo;
   } catch (e) {
-    console.log('error', e);
+    console.log('A problem has occurred with the fetch operation', e);
   }
 };
 
@@ -53,10 +53,10 @@ const updateUI = async () => {
   const request = await fetch('/all');
   try {
     const weatherData = await request.json();
-    const lData = weatherData.length - 1;
-    document.getElementById('date').innerHTML = weatherData[lData].date;
-    document.getElementById('temp').innerHTML = weatherData[lData].temperature + ' &#8457;';
-    document.getElementById('content').innerHTML = "Today's feeling: " + weatherData[lData].userResponse;
+    //const lData = weatherData.length - 1;
+    document.getElementById('date').innerHTML = weatherData.date;
+    document.getElementById('temp').innerHTML = weatherData.temperature + ' &#8457;';
+    document.getElementById('content').innerHTML = "Today's feeling: " + weatherData.userResponse;
   } catch (e) {
     console.log('error', e);
   }
